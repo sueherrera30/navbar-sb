@@ -1,0 +1,280 @@
+.header {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+&__navbar {
+display: flex;
+height: 130px;
+width: 100%;
+}
+
+&__navbar--logoImg {
+padding: 3%;
+}
+
+
+&__navbar--link {
+max-width: 60%;
+width: 100%;
+text-align: end;
+padding-right:2%;
+margin-top: 4%;
+    
+color: c(black);
+font-family: f(ralewayRegular);
+font-size: 12px;
+font-weight: normal;
+
+}
+
+
+&__navbar--link:hover {
+text-decoration: underline;
+font-family: f(ralewayRegular);
+color: c(blue-green);
+}
+
+&__navbar--seachIcon {
+height: 33px;
+width: 33px;
+background-color: c(light-grey);
+border-radius: 50%;
+cursor: pointer;
+position: absolute;
+top: 47%;
+right: 0%;
+}
+
+
+
+&__navbar--seachIcon:hover {
+background-color: c(lighten-grey);
+
+}
+
+.fa-search {
+color: c(white);
+font-size: 12px;
+line-height: 33px;
+margin-left: 11px;
+}
+
+
+&__navbar--button //header__navbar--carButton {
+height: 43px;
+width: 147px;
+border: dashed 1px #DFDFDF;
+margin-top: 3%;
+margin-left: 0.5%;
+position: relative;
+
+
+}
+&__navbar--button p // navbar__carButton--total{
+position: absolute;
+font-size: 16px;
+font-weight: 600;
+font-family: "RalewayBold", sans-serif;
+padding: 6% 24%;
+text-align: center;
+}
+
+.fa-shopping-bag // navbar__carButton--icon{
+position: absolute;
+color: c(blue-green);
+font-size: 25px;
+top:-20px;
+right: 15px;
+}
+&__navbar--number// navbar__carButton--quantity{
+font-size: 13px;
+background-color: #D2D2D2;
+height: 25px;
+width: 25px;
+padding: 3px;
+line-height: 20px;
+display: block;
+text-align: center;
+background: #E4E4E4;
+border-radius: 15px;
+position: absolute;
+top: -35px;
+right: -5px;
+}
+
+    --------------------------
+    
+    
+&__navbarList {
+width: 100%;
+height: 59px;
+border: solid 1px #D2D2D2;
+border-bottom: solid 1px #D2D2D2;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+line-height: 5;
+
+}
+
+&__navbarList--linksContainer{
+
+}
+
+&__navbarList--links{
+font-size: 13px;
+font-weight: bold;
+font-family: "RalewayRegular", sans-serif;
+text-align: center;
+
+}
+
+&__navbarList--links:hover{
+color: c(blue-green);
+}
+.dropdown {
+position: relative;
+display: inline-block;
+width: 250px;
+}
+
+.dropdown-content {
+display:none;
+position: absolute;
+background-color:c(white);
+min-width: 100px;
+overflow: auto;
+z-index: 1;
+border: solid 1px c(lighten-grey);
+padding: 3%;
+}
+.dropdown-content a {
+color: black;
+text-decoration: none;
+display: block;
+font-size: 12px;
+font-family: "RalewayRegular", sans-serif;
+}
+
+.dropdown-content a:hover{
+color: c(blue-green);
+}
+.show{
+display:block;
+}
+
+.fa-angle-down{
+color: c(light-grey);
+}
+
+&__navbar--popSignIn{
+display: block;
+opacity: 0;
+z-index: 10000;
+filter: alpha(opacity=0);
+transition: all 0.3s ease 0.25s;
+padding: 20px 25px 10px;
+width: 300px;
+background: #000;
+border: 2px solid #E6E6E6;
+position: absolute;
+top: 51px;
+left: -180px;
+color: #767676;
+font-family: 'Raleway';
+box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.07000000000000001);
+}
+
+&__navbar--popSearch{
+display: none;
+}
+&__navbar--popMyProducts{
+display: none;
+}
+&__navbar--popNoProducts{
+display: none;
+}
+
+&__pop--input{
+background-color: #FFFFFF;
+border: 1px solid #D2D2D2;
+border-radius: initial;
+padding: 10px;
+height: 39px
+}
+
+
+&__popSearch--input{
+background-color: #FFFFFF;
+border: 1px solid #D2D2D2;
+border-radius: initial;
+padding: 10px;
+height: 39px;
+width: 150px;
+margin: 6% 2%;
+}
+
+&__popSearch--button{
+background-color:c(lighten-grey);
+color: #FFFFFF;
+padding: 6px 18px;
+font-family: f(ralewayRegular);
+cursor: pointer;
+margin: 6% 2%;
+width:132px;
+height:39px;
+border:none;
+}
+
+&__popSearch--button:hover{
+background-color: c(blue-green);
+}
+
+
+}
+
+.tooltip {
+position: relative;
+display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 350px;
+height: 85px;
+background-color: c(white);
+color:c(light-grey);
+text-align: center;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+top: 79%;
+margin-left: -350px;
+opacity: 0;
+transition: opacity 1s;
+border: 2px solid c(light-grey);
+box-shadow: 0 5px 5px c(lighten-grey);
+padding: 20%;
+
+}
+
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 50%;
+margin-left: 148px;
+border-width: 9px;
+border-style: solid;
+border-color: c(lighten-grey) transparent transparent transparent;
+transform: rotate(180deg);
+
+
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}

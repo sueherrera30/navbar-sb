@@ -1,0 +1,106 @@
+<div class="header__navbar">
+
+    <div class="header__navbar--logoImg">
+        <img src="https://www.stickerboutique.com/wp-content/uploads/2016/01/LOGO_HORIZONTAL.png" alt="logo-stickerboutique">
+    </div>
+
+    <a class="header__navbar--link ">
+INICIAR SESIÓN
+<div class="header__navbar--popSignIn">
+
+<span>INICIAR SESIÓN <hr></span>
+<p>Nombre de usuario o correo electrónico*</p>
+<input type="text" class="header__pop--input">
+<p>Contraseña*</p>
+<input type="text" class="header__pop--input">
+<button>Acceder</button>
+<span> REGISTRARSE<hr></span>
+<button>REGISTRARSE</button>
+
+</div>
+</a>
+
+    <div class="tooltip">
+        <div class="header__navbar--seachIcon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="tooltiptext">
+            <form>
+                <input placeholder="Buscar... " type="text" class="header__popSearch--input">
+                <button class="header__popSearch--button">BUSCAR</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div class="header__navbar--button">
+        <div class="header__navbar--number"> 0 </div>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <p> Carrito $0</p>
+    </div>
+
+
+    {{-- @if(!$car->isEmpty()) --}}
+    <div class="header__navbar--popMyProducts">
+        <p>Producto(s) agregado(s) recientemente</p>
+        <hr>
+
+        <div>
+            <img src="" alt="producto a comprar">
+            <p>NOMBRE Y CANTIDAD DE PRODUCTO A COMPRAR</p>
+            <p> 1x $455</p>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <hr>
+        <span>SUBTOTAL DEL CARRITO</span><span>$455</span>
+        <button>VER CARRITO</button>
+        <button>FINALIZAR COMPRA</button>
+
+    </div>
+    {{-- @else --}}
+    <div class="header__navbar--popNoProducts">
+        <p>No hay productos en el carrito.</p>
+        <hr>
+    </div>
+    {{-- @endif --}}
+
+
+
+</div>
+
+
+<div class="header__navbarList">
+
+    <div class="header__navbarList--linksContainer"> <a class="header__navbarList--links"></a>
+    </div>
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">ETIQUETAS LAVABLES</a></div>
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">ETIQUETAS PARA ROPA </a></div>
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">EVENTOS</a></div>
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">TARJETAS</a></div>
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">TAGS</a></div>
+
+
+    <div class="dropdown"><a class="header__navbarList--links " id="dropdownText_JS">ETIQUETAS ESCOLARES <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+        <div id="dropdown_JS" class="dropdown-content">
+            <a class="dropdown__text">PAQUETES DE LAPICES</a>
+            <a class="dropdown__text">PAQUETES DE CUADERNOS Y LIBROS</a>
+            <a class="dropdown__text">PAQUETES DE  ÚTILES</a>
+            <a class="dropdown__text">PAQUETES DE ETIQUETAS ESCOLARES</a>
+        </div>
+
+    </div>
+
+    <div class="header__navbarList--linksContainer"><a class="header__navbarList--links">GUARDERIA</a>
+        <div>
+            <div class="header__navbarList--linksContainer"><a class="header__navbarList--links"></a></div>
+        </div>
+
+        <div class="header__mobile mobile_JS">
+            @include('client.general._menu', [ 'menu' => 'mobile&#3 'class' => 'header__mobile--item&#3 ])
+            <div class="header__mobile--item">
+                @include('client.general._social', [ 'class' => '' ])
+            </div>
+        </div>
+        </header>
